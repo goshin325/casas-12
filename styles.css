@@ -1,0 +1,46 @@
+*, *::after, *::before{
+  box-sizing: border-box;  
+}
+
+:root{
+  --hue: 200;
+  --satruration: 50%;
+  --foregroud-color: hsl(var(--hue)), (var(--satruration),75%) ; 
+  --backgroud-color: hsl(var(--hue)), (var(--satruration),25%) ; 
+}
+
+body{
+  margin: 0;
+  background-color: darkgreen;
+}
+.paddle{
+  --position: 50;
+    
+ position: absolute;
+ background-color: var(--foregroud-color);
+ top: calc(var(--position) * 1vh);
+ transform: translateY(-50%);
+ width: 1vh;
+ height: 10vh;
+}
+
+.paddle.left{
+ left: 1vw;
+}
+
+.paddle.right{
+ right: 1vw;
+}
+.ball{
+    --x: 50;
+    --y: 50;
+
+    position: absolute;
+    background-color: var(--foregroud-color);
+    left: calc(var(--x) * 1vh);
+    top: calc(var(--y) * 1vh);
+    transform: translateY(-50%);
+    width: 2.5vh;
+    height: 2.5vh;
+   
+}
